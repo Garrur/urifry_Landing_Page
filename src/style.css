@@ -6,8 +6,10 @@ html, body {
 }
 .white-icon {
     color: white;
-  }
-
+}
+.black-icon {
+    color: black;
+}
 .underline {
     position: relative;
     display: inline-block;
