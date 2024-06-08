@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './style.css'; // Import the common CSS file
+import './style.css'; 
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import Features from './components/Features';

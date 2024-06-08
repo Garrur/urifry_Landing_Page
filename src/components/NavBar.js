@@ -25,7 +25,7 @@ const NavBar = () => {
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <button className="close-btn" onClick={toggleMenu} aria-label="Close menu">
-          <i className="fa-solid fa-xmark"></i>
+          <i className="fa-solid fa-xmark white-icon"></i>
         </button>
         <li><a href="#">Home</a></li>
         <li><a href="#">About Us</a></li>
