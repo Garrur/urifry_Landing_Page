@@ -10,13 +10,14 @@ import Banner from './components/Banner';
 import Footer from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import { ThemeProvider } from './components/ThemeContext';
 function App() {
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
+    <ThemeProvider>
     <div className="App">
       <NavBar />
       <Header />
@@ -27,6 +28,7 @@ function App() {
       <Banner />
       <Footer />
     </div>
+    </ThemeProvider>
   );
 }
 

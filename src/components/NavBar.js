@@ -1,24 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { ThemeContext } from './ThemeContext';
+import ToggleButton from './ToggleButton';
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const { darkMode } = useContext(ThemeContext);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.body.classList.toggle('dark-mode');
-  };
-
   return (
     <nav>
       <div className="logo-nav">
-        <button className="menu-toggle" onClick={toggleMenu}>
-          <i className="fa-solid fa-bars"></i>
-        </button>
+      <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+      <i className="fa-solid fa-bars white-icon"></i>
+    </button>
         <img
           src={darkMode ? 'dir/images/logo-white.png' : 'dir/images/logo.png'}
           alt="uiFry Logo"
@@ -27,7 +24,7 @@ const NavBar = () => {
       </div>
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        <button className="close-btn" onClick={toggleMenu}>
+        <button className="close-btn" onClick={toggleMenu} aria-label="Close menu">
           <i className="fa-solid fa-xmark"></i>
         </button>
         <li><a href="#">Home</a></li>
@@ -35,10 +32,8 @@ const NavBar = () => {
         <li><a href="#">Pricing</a></li>
         <li><a href="#">Features</a></li>
       </ul>
-      <button className="switch-mode" onClick={toggleDarkMode}>
-        <i className={`fa-solid ${darkMode ? 'fa-sun' : 'fa-moon'}`}></i>
-      </button>
-      <button className="nav-button">Download</button>
+      <ToggleButton/>
+      <button className={`nav-button ${darkMode ? 'dark-text' : ''}`}>Download</button>
     </nav>
   );
 };

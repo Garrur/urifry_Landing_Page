@@ -4,7 +4,15 @@ html, body {
     height: 100%;
     margin: 0;
 }
+.white-icon {
+    color: white;
+  }
 
+.underline {
+    position: relative;
+    display: inline-block;
+    background-color: #000;
+  }  
 body.dark-mode {
     background-color: var(--black);
     color: var(--white);
@@ -33,6 +41,12 @@ body.dark-mode button{
 body.dark-mode .dark-text {
     color: var(--white);
 }
+
+.dark-mode .main-head-section {
+    --header-bg-color: #222;
+    --header-text-color: #fff;
+  }
+
 
 :root {
     --black-dark: #353535;
@@ -1070,6 +1084,10 @@ nav {
     font-weight: 500;
     font-size: 12px;
 }
+.dark-button {
+    color: var(--black); 
+    background-color: var(--white); 
+  }
 
 .Video-btn {
     font-size: 10px;
