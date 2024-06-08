@@ -38,7 +38,9 @@ const NavBar = () => {
           onClick={toggleMenu}
           aria-label="Close menu"
         >
-          <i className="fa-solid fa-xmark white-icon"></i>
+          <i className={`fa-solid fa-xmark ${
+            darkMode ? "white-icon" : "black-icon"
+          }`}></i>
         </button>
         <li>
           <a href="#">Home</a>
