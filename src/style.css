@@ -1,5 +1,4 @@
 
-
 html, body {
     height: 100%;
     margin: 0;
@@ -75,7 +74,9 @@ nav {
 
 .logo-nav {
     margin-left: 2%;
+    cursor: pointer;
 }
+
 
 .logo-nav img {
     position: relative;
